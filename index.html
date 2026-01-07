@@ -586,7 +586,7 @@
   <div class="session-card">
     <span class="session-number">S5</span>
     <strong>ENT & Dispositifs pédagogiques</strong>
-    <p style="font-size: 11px; margin-top: 6px; color: #666;">Plateforme + Méthodologies (4h)</p>
+    <p style="font-size: 11px; margin-top: 6px; color: #666;">Plateforme + Méthodologies (4h + 4h)</p>
   </div>
 </div>
 
@@ -596,7 +596,8 @@
     <h4><i class="fas fa-calendar-alt"></i> Calendrier académique</h4>
     <p><strong>Démarrage :</strong> 12 Janvier 2026</p>
     <p><strong>Finalisation :</strong> 04 Mars 2026</p>
-    <p><strong>Horaires :</strong> 8h30-12h30 • 15h00-19h00 (vendredi)</p>
+    <p><strong>Horaires :</strong> 8h30-12h30 • 14h00-18h00</p>
+    <p><strong>Vendredi :</strong> 15h00-19h00 (uniquement)</p>
     <p><strong>Durée :</strong> 20h par groupe (5 séances en 10 jours max)</p>
   </div>
   
@@ -934,7 +935,7 @@
           <strong>Matin:</strong><br>
           <span class="room room-mbambey">G25</span> <span class="session-badge s5-badge">S5</span><br>
           <span class="room room-salle2">G26</span> <span class="session-badge s5-badge">S5</span><br>
-          <strong>15h-19h:</strong><br>
+          <strong>Après-midi:</strong><br>
           <span class="room room-mbambey">G27</span> <span class="session-badge s5-badge">S5</span>
         </td>
         <td></td>
@@ -985,6 +986,9 @@
   <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; font-size: 12px; color: #777;">
     <p><i class="fas fa-info-circle" style="color: var(--accent);"></i> 
       <strong>Important :</strong> La session S5 combine l'utilisation de l'ENT (4h) et la compréhension des dispositifs pédagogiques institutionnels (4h). Apportez vos identifiants ENT.
+    </p>
+    <p><i class="fas fa-clock" style="color: var(--accent);"></i> 
+      <strong>Rappel horaires :</strong> 8h30-12h30 ou 14h00-18h00 (lun-jeu) • Vendredi uniquement: 15h00-19h00
     </p>
   </div>
 </div>
@@ -1175,27 +1179,27 @@
       { date: "Mer 18/02", time: "14h00-18h00", room: "salle2", session: 4 },
       { date: "Ven 20/02", time: "15h00-19h00", room: "salle2", session: 5 }
     ]},
-    // Semaine 7-8 : Groupes 25-27 (23 février - 4 mars) - CORRECTIF COMPLET
+    // Semaine 7-8 : Groupes 25-27 (23 février - 4 mars) - HORAIRES CORRIGÉS
     { number: 25, sessions: [
       { date: "Lun 23/02", time: "8h30-12h30", room: "mbambey", session: 1 },
       { date: "Mer 25/02", time: "8h30-12h30", room: "mbambey", session: 2 },
-      { date: "Ven 27/02", time: "8h30-12h30", room: "mbambey", session: 3 },
+      { date: "Ven 27/02", time: "15h00-19h00", room: "mbambey", session: 3 },
       { date: "Lun 02/03", time: "8h30-12h30", room: "mbambey", session: 4 },
-      { date: "Mer 04/03", time: "15h00-19h00", room: "mbambey", session: 5 }
+      { date: "Mer 04/03", time: "8h30-12h30", room: "mbambey", session: 5 }
     ]},
     { number: 26, sessions: [
       { date: "Lun 23/02", time: "8h30-12h30", room: "salle2", session: 1 },
       { date: "Mer 25/02", time: "8h30-12h30", room: "salle2", session: 2 },
-      { date: "Ven 27/02", time: "8h30-12h30", room: "salle2", session: 3 },
+      { date: "Ven 27/02", time: "15h00-19h00", room: "salle2", session: 3 },
       { date: "Lun 02/03", time: "8h30-12h30", room: "salle2", session: 4 },
-      { date: "Mer 04/03", time: "15h00-19h00", room: "salle2", session: 5 }
+      { date: "Mer 04/03", time: "8h30-12h30", room: "salle2", session: 5 }
     ]},
     { number: 27, sessions: [
       { date: "Lun 23/02", time: "14h00-18h00", room: "mbambey", session: 1 },
       { date: "Mer 25/02", time: "14h00-18h00", room: "salle2", session: 2 },
       { date: "Ven 27/02", time: "15h00-19h00", room: "mbambey", session: 3 },
       { date: "Lun 02/03", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Mer 04/03", time: "15h00-19h00", room: "mbambey", session: 5 }
+      { date: "Mer 04/03", time: "14h00-18h00", room: "mbambey", session: 5 }
     ]}
   ];
 
@@ -1261,6 +1265,20 @@
     return true;
   }
 
+  // Fonction pour vérifier les horaires 15h-19h uniquement le vendredi
+  function check15h19hOnlyFriday(groupSessions) {
+    for (let session of groupSessions) {
+      const day = session.date.split(' ')[0];
+      const time = session.time;
+      
+      // Si l'horaire est 15h00-19h00, vérifier que c'est un vendredi
+      if (time === "15h00-19h00" && day !== "Ven") {
+        return false;
+      }
+    }
+    return true;
+  }
+
   // Générer les cartes de groupe
   function generateGroupCards() {
     const groupPlanning = document.getElementById('groupPlanning');
@@ -1274,8 +1292,9 @@
       const totalDays = checkDuration(group.sessions);
       const has24hRest = check24hRest(group.sessions);
       const hasFridayTimes = checkFridayTimes(group.sessions);
+      const hasCorrect15h19h = check15h19hOnlyFriday(group.sessions);
       
-      const isValid = totalDays <= 14 && has24hRest && hasFridayTimes;
+      const isValid = totalDays <= 14 && has24hRest && hasFridayTimes && hasCorrect15h19h;
       
       let sessionsHTML = '';
       group.sessions.forEach((session) => {
@@ -1319,6 +1338,7 @@
           <i class="fas fa-info-circle"></i> 5 séances en ${totalDays} jours
           ${!has24hRest ? '<div style="color: #991b1b; margin-top: 3px;"><i class="fas fa-exclamation-triangle"></i> Vérifier repos 24h</div>' : ''}
           ${!hasFridayTimes ? '<div style="color: #991b1b; margin-top: 3px;"><i class="fas fa-exclamation-triangle"></i> Vérifier horaires vendredi</div>' : ''}
+          ${!hasCorrect15h19h ? '<div style="color: #991b1b; margin-top: 3px;"><i class="fas fa-exclamation-triangle"></i> 15h-19h uniquement vendredi</div>' : ''}
         </div>
         ${sessionsHTML}
       `;
@@ -1333,12 +1353,13 @@
       const totalDays = checkDuration(group.sessions);
       const has24hRest = check24hRest(group.sessions);
       const hasFridayTimes = checkFridayTimes(group.sessions);
+      const hasCorrect15h19h = check15h19hOnlyFriday(group.sessions);
       
-      if (totalDays <= 14 && has24hRest && hasFridayTimes) {
+      if (totalDays <= 14 && has24hRest && hasFridayTimes && hasCorrect15h19h) {
         validGroups++;
-        console.log(`✓ Groupe ${group.number}: ${totalDays} jours, repos OK, horaires OK`);
+        console.log(`✓ Groupe ${group.number}: ${totalDays} jours, repos OK, horaires OK, 15h-19h OK`);
       } else {
-        console.log(`✗ Groupe ${group.number}: ${totalDays} jours, repos: ${has24hRest}, vendredi: ${hasFridayTimes}`);
+        console.log(`✗ Groupe ${group.number}: ${totalDays} jours, repos: ${has24hRest}, vendredi: ${hasFridayTimes}, 15h-19h: ${hasCorrect15h19h}`);
       }
     });
     
@@ -1349,6 +1370,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     console.log('Emploi du temps ENO Sébikotane chargé avec succès!');
     console.log('Planning optimisé: 5 séances en 10-14 jours maximum par groupe');
+    console.log('Règle horaire: 15h00-19h00 uniquement le vendredi');
     
     generateGroupCards();
   });
