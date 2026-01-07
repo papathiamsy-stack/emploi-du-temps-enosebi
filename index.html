@@ -432,6 +432,17 @@
       margin-bottom: 5px;
     }
 
+    .week-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 10px;
+      font-weight: 600;
+      margin: 2px;
+      background: var(--light);
+      color: var(--primary);
+    }
+
     @media print {
       body {
         padding: 10px;
@@ -575,7 +586,7 @@
   <div class="session-card">
     <span class="session-number">S5</span>
     <strong>ENT & Dispositifs pédagogiques</strong>
-    <p style="font-size: 11px; margin-top: 6px; color: #666;">Plateforme + Méthodologies (4h + 4h)</p>
+    <p style="font-size: 11px; margin-top: 6px; color: #666;">Plateforme + Méthodologies (4h)</p>
   </div>
 </div>
 
@@ -584,9 +595,9 @@
   <div class="card">
     <h4><i class="fas fa-calendar-alt"></i> Calendrier académique</h4>
     <p><strong>Démarrage :</strong> 12 Janvier 2026</p>
-    <p><strong>Finalisation :</strong> 27 Février 2026</p>
-    <p><strong>Horaires :</strong> 8h30-12h30 • 14h00-18h00</p>
-    <p><strong>Durée :</strong> 20h par groupe (5 séances)</p>
+    <p><strong>Finalisation :</strong> 04 Mars 2026</p>
+    <p><strong>Horaires :</strong> 8h30-12h30 • 15h00-19h00 (vendredi)</p>
+    <p><strong>Durée :</strong> 20h par groupe (5 séances en 10 jours max)</p>
   </div>
   
   <div class="card">
@@ -609,77 +620,332 @@
   </div>
 </div>
 
-<!-- PLANNING JANVIER -->
-<h2 class="section-title"><i class="fas fa-calendar-week"></i> Planning Général - Janvier 2026</h2>
+<!-- PLANNING PAR SEMAINE -->
+<h2 class="section-title"><i class="fas fa-calendar-week"></i> Planning Par Semaine (5 séances en 10 jours)</h2>
 
 <div class="schedule-table">
   <table>
     <thead>
       <tr>
-        <th>Date</th>
-        <th>Matin (8h30-12h30)</th>
-        <th>Après-midi (14h00-18h00)</th>
+        <th>Semaine</th>
+        <th>Lundi</th>
+        <th>Mardi</th>
+        <th>Mercredi</th>
+        <th>Jeudi</th>
+        <th>Vendredi</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td><strong>Lun 12/01</strong></td><td><span class="room room-mbambey">G1</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G2</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G3</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G4</span> <span class="session-badge s1-badge">S1</span></td></tr>
-      <tr><td><strong>Mar 13/01</strong></td><td><span class="room room-mbambey">G5</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G6</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G7</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G8</span> <span class="session-badge s1-badge">S1</span></td></tr>
-      <tr><td><strong>Mer 14/01</strong></td><td><span class="room room-mbambey">G9</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G10</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G1</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G2</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Jeu 15/01</strong></td><td><span class="room room-mbambey">G11</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G12</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G3</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G4</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Ven 16/01</strong></td><td><span class="room room-mbambey">G13</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G14</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G5</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G6</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Lun 19/01</strong></td><td><span class="room room-mbambey">G15</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G16</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G7</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G8</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Mar 20/01</strong></td><td><span class="room room-mbambey">G17</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G18</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G9</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G10</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Mer 21/01</strong></td><td><span class="room room-mbambey">G19</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G20</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G11</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G12</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Jeu 22/01</strong></td><td><span class="room room-mbambey">G21</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G22</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G13</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G14</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Ven 23/01</strong></td><td><span class="room room-mbambey">G23</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G24</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G15</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G16</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Lun 26/01</strong></td><td><span class="room room-mbambey">G25</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G26</span> <span class="session-badge s1-badge">S1</span></td><td><span class="room room-mbambey">G17</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G18</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Mar 27/01</strong></td><td><span class="room room-mbambey">G27</span> <span class="session-badge s1-badge">S1</span> • <span class="room room-salle2">G1</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G19</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G20</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Mer 28/01</strong></td><td><span class="room room-mbambey">G2</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G3</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G21</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G22</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Jeu 29/01</strong></td><td><span class="room room-mbambey">G4</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G5</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G23</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G24</span> <span class="session-badge s2-badge">S2</span></td></tr>
-      <tr><td><strong>Ven 30/01</strong></td><td><span class="room room-mbambey">G6</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G7</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G25</span> <span class="session-badge s2-badge">S2</span> • <span class="room room-salle2">G26</span> <span class="session-badge s2-badge">S2</span></td></tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- PLANNING FÉVRIER -->
-<h2 class="section-title"><i class="fas fa-calendar-week"></i> Planning Général - Février 2026</h2>
-
-<div class="schedule-table">
-  <table>
-    <thead>
       <tr>
-        <th>Date</th>
-        <th>Matin (8h30-12h30)</th>
-        <th>Après-midi (14h00-18h00)</th>
+        <td><strong>Semaine 1<br>(12-16/01)</strong><br><span class="week-badge">Groupes 1-8</span></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G1</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G2</span> <span class="session-badge s1-badge">S1</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G3</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G4</span> <span class="session-badge s1-badge">S1</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G5</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G6</span> <span class="session-badge s1-badge">S1</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G7</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G8</span> <span class="session-badge s1-badge">S1</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G1</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G2</span> <span class="session-badge s2-badge">S2</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G3</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G4</span> <span class="session-badge s2-badge">S2</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G5</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G6</span> <span class="session-badge s2-badge">S2</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G7</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G8</span> <span class="session-badge s2-badge">S2</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G1</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G2</span> <span class="session-badge s3-badge">S3</span><br>
+          <strong>15h-19h:</strong><br>
+          <span class="room room-mbambey">G3</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G4</span> <span class="session-badge s3-badge">S3</span>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-      <tr><td><strong>Lun 02/02</strong></td><td><span class="room room-mbambey">G8</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G9</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G27</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G1</span> <span class="session-badge s3-badge">S3</span></td></tr>
-      <tr><td><strong>Mar 03/02</strong></td><td><span class="room room-mbambey">G10</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G11</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G2</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G3</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Mer 04/02</strong></td><td><span class="room room-mbambey">G12</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G13</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G4</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G5</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Jeu 05/02</strong></td><td><span class="room room-mbambey">G14</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G15</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G6</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G7</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Ven 06/02</strong></td><td><span class="room room-mbambey">G16</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G17</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G8</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G9</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Lun 09/02</strong></td><td><span class="room room-mbambey">G18</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G19</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G10</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G11</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Mar 10/02</strong></td><td><span class="room room-mbambey">G20</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G21</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G12</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G13</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Mer 11/02</strong></td><td><span class="room room-mbambey">G22</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G23</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G14</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G15</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Jeu 12/02</strong></td><td><span class="room room-mbambey">G24</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G25</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G16</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G17</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Ven 13/02</strong></td><td><span class="room room-mbambey">G26</span> <span class="session-badge s3-badge">S3</span> • <span class="room room-salle2">G27</span> <span class="session-badge s3-badge">S3</span></td><td><span class="room room-mbambey">G18</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G19</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Lun 16/02</strong></td><td><span class="room room-mbambey">G1</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G2</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G20</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G21</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Mar 17/02</strong></td><td><span class="room room-mbambey">G3</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G4</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G22</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G23</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Mer 18/02</strong></td><td><span class="room room-mbambey">G5</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G6</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G24</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G25</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Jeu 19/02</strong></td><td><span class="room room-mbambey">G7</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G8</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G26</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G27</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Ven 20/02</strong></td><td><span class="room room-mbambey">G9</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G10</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G1</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G2</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Lun 23/02</strong></td><td><span class="room room-mbambey">G11</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G12</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G3</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G4</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Mar 24/02</strong></td><td><span class="room room-mbambey">G13</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G14</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G5</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G6</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Mer 25/02</strong></td><td><span class="room room-mbambey">G15</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G16</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G7</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G8</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Jeu 26/02</strong></td><td><span class="room room-mbambey">G17</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G18</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G9</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G10</span> <span class="session-badge s4-badge">S4</span></td></tr>
-      <tr><td><strong>Ven 27/02</strong></td><td><span class="room room-mbambey">G19</span> <span class="session-badge s5-badge">S5</span> • <span class="room room-salle2">G20</span> <span class="session-badge s5-badge">S5</span></td><td><span class="room room-mbambey">G11</span> <span class="session-badge s4-badge">S4</span> • <span class="room room-salle2">G12</span> <span class="session-badge s4-badge">S4</span></td></tr>
+      <tr>
+        <td><strong>Semaine 2<br>(19-23/01)</strong><br><span class="week-badge">Groupes 1-8</span></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G5</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G6</span> <span class="session-badge s3-badge">S3</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G7</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G8</span> <span class="session-badge s3-badge">S3</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G1</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G2</span> <span class="session-badge s4-badge">S4</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G3</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G4</span> <span class="session-badge s4-badge">S4</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G5</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G6</span> <span class="session-badge s4-badge">S4</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G7</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G8</span> <span class="session-badge s4-badge">S4</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G1</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G2</span> <span class="session-badge s5-badge">S5</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G3</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G4</span> <span class="session-badge s5-badge">S5</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G5</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G6</span> <span class="session-badge s5-badge">S5</span><br>
+          <strong>15h-19h:</strong><br>
+          <span class="room room-mbambey">G7</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G8</span> <span class="session-badge s5-badge">S5</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Semaine 3<br>(26-30/01)</strong><br><span class="week-badge">Groupes 9-16</span></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G9</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G10</span> <span class="session-badge s1-badge">S1</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G11</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G12</span> <span class="session-badge s1-badge">S1</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G13</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G14</span> <span class="session-badge s1-badge">S1</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G15</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G16</span> <span class="session-badge s1-badge">S1</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G9</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G10</span> <span class="session-badge s2-badge">S2</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G11</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G12</span> <span class="session-badge s2-badge">S2</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G13</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G14</span> <span class="session-badge s2-badge">S2</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G15</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G16</span> <span class="session-badge s2-badge">S2</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G9</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G10</span> <span class="session-badge s3-badge">S3</span><br>
+          <strong>15h-19h:</strong><br>
+          <span class="room room-mbambey">G11</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G12</span> <span class="session-badge s3-badge">S3</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Semaine 4<br>(02-06/02)</strong><br><span class="week-badge">Groupes 9-16</span></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G13</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G14</span> <span class="session-badge s3-badge">S3</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G15</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G16</span> <span class="session-badge s3-badge">S3</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G9</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G10</span> <span class="session-badge s4-badge">S4</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G11</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G12</span> <span class="session-badge s4-badge">S4</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G13</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G14</span> <span class="session-badge s4-badge">S4</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G15</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G16</span> <span class="session-badge s4-badge">S4</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G9</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G10</span> <span class="session-badge s5-badge">S5</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G11</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G12</span> <span class="session-badge s5-badge">S5</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G13</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G14</span> <span class="session-badge s5-badge">S5</span><br>
+          <strong>15h-19h:</strong><br>
+          <span class="room room-mbambey">G15</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G16</span> <span class="session-badge s5-badge">S5</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Semaine 5<br>(09-13/02)</strong><br><span class="week-badge">Groupes 17-24</span></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G17</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G18</span> <span class="session-badge s1-badge">S1</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G19</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G20</span> <span class="session-badge s1-badge">S1</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G21</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G22</span> <span class="session-badge s1-badge">S1</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G23</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G24</span> <span class="session-badge s1-badge">S1</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G17</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G18</span> <span class="session-badge s2-badge">S2</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G19</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G20</span> <span class="session-badge s2-badge">S2</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G21</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G22</span> <span class="session-badge s2-badge">S2</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G23</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G24</span> <span class="session-badge s2-badge">S2</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G17</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G18</span> <span class="session-badge s3-badge">S3</span><br>
+          <strong>15h-19h:</strong><br>
+          <span class="room room-mbambey">G19</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G20</span> <span class="session-badge s3-badge">S3</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Semaine 6<br>(16-20/02)</strong><br><span class="week-badge">Groupes 17-24</span></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G21</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G22</span> <span class="session-badge s3-badge">S3</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G23</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G24</span> <span class="session-badge s3-badge">S3</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G17</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G18</span> <span class="session-badge s4-badge">S4</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G19</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G20</span> <span class="session-badge s4-badge">S4</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G21</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G22</span> <span class="session-badge s4-badge">S4</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G23</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G24</span> <span class="session-badge s4-badge">S4</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G17</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G18</span> <span class="session-badge s5-badge">S5</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G19</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G20</span> <span class="session-badge s5-badge">S5</span>
+        </td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G21</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G22</span> <span class="session-badge s5-badge">S5</span><br>
+          <strong>15h-19h:</strong><br>
+          <span class="room room-mbambey">G23</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G24</span> <span class="session-badge s5-badge">S5</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Semaine 7<br>(23-27/02)</strong><br><span class="week-badge">Groupes 25-27</span></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G25</span> <span class="session-badge s1-badge">S1</span><br>
+          <span class="room room-salle2">G26</span> <span class="session-badge s1-badge">S1</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G27</span> <span class="session-badge s1-badge">S1</span>
+        </td>
+        <td></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G25</span> <span class="session-badge s2-badge">S2</span><br>
+          <span class="room room-salle2">G26</span> <span class="session-badge s2-badge">S2</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G27</span> <span class="session-badge s2-badge">S2</span>
+        </td>
+        <td></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G25</span> <span class="session-badge s3-badge">S3</span><br>
+          <span class="room room-salle2">G26</span> <span class="session-badge s3-badge">S3</span><br>
+          <strong>15h-19h:</strong><br>
+          <span class="room room-mbambey">G27</span> <span class="session-badge s3-badge">S3</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Semaine 8<br>(02-04/03)</strong><br><span class="week-badge">Fin groupes 25-27</span></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G25</span> <span class="session-badge s4-badge">S4</span><br>
+          <span class="room room-salle2">G26</span> <span class="session-badge s4-badge">S4</span><br>
+          <strong>Après-midi:</strong><br>
+          <span class="room room-mbambey">G27</span> <span class="session-badge s4-badge">S4</span>
+        </td>
+        <td></td>
+        <td>
+          <strong>Matin:</strong><br>
+          <span class="room room-mbambey">G25</span> <span class="session-badge s5-badge">S5</span><br>
+          <span class="room room-salle2">G26</span> <span class="session-badge s5-badge">S5</span><br>
+          <strong>15h-19h:</strong><br>
+          <span class="room room-mbambey">G27</span> <span class="session-badge s5-badge">S5</span>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 </div>
 
 <!-- PLANNING PAR GROUPE -->
-<h2 class="section-title"><i class="fas fa-users"></i> Planning Par Groupe</h2>
+<h2 class="section-title"><i class="fas fa-users"></i> Planning Par Groupe (5 séances en 10 jours maximum)</h2>
 
 <div class="group-planning" id="groupPlanning">
   <!-- Les groupes seront générés par JavaScript -->
@@ -736,242 +1002,355 @@
   // Icônes pour chaque session
   const sessionIcons = ['💻', '🖥️', '🪟', '📊', '🌐'];
 
-  // Données des groupes avec planning détaillé (DATES S5 CORRIGÉES)
+  // Données des groupes avec planning concentré sur 2 semaines - CORRIGÉ
   const groupsData = [
+    // Semaine 1-2 : Groupes 1-8 (12-23 janvier)
     { number: 1, sessions: [
       { date: "Lun 12/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Mer 14/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Mar 27/01", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Ven 20/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Lun 16/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Mer 14/01", time: "8h30-12h30", room: "mbambey", session: 2 },
+      { date: "Ven 16/01", time: "8h30-12h30", room: "mbambey", session: 3 },
+      { date: "Mar 20/01", time: "8h30-12h30", room: "mbambey", session: 4 },
+      { date: "Jeu 22/01", time: "8h30-12h30", room: "mbambey", session: 5 }
     ]},
     { number: 2, sessions: [
       { date: "Lun 12/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Mer 14/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Mer 28/01", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Ven 20/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Lun 16/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Mer 14/01", time: "8h30-12h30", room: "salle2", session: 2 },
+      { date: "Ven 16/01", time: "8h30-12h30", room: "salle2", session: 3 },
+      { date: "Mar 20/01", time: "8h30-12h30", room: "salle2", session: 4 },
+      { date: "Jeu 22/01", time: "8h30-12h30", room: "salle2", session: 5 }
     ]},
     { number: 3, sessions: [
       { date: "Lun 12/01", time: "14h00-18h00", room: "mbambey", session: 1 },
-      { date: "Jeu 15/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Mer 28/01", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Mar 03/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Mar 17/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Mer 14/01", time: "14h00-18h00", room: "mbambey", session: 2 },
+      { date: "Ven 16/01", time: "15h00-19h00", room: "mbambey", session: 3 },
+      { date: "Mar 20/01", time: "14h00-18h00", room: "mbambey", session: 4 },
+      { date: "Jeu 22/01", time: "14h00-18h00", room: "mbambey", session: 5 }
     ]},
     { number: 4, sessions: [
       { date: "Lun 12/01", time: "14h00-18h00", room: "salle2", session: 1 },
-      { date: "Jeu 15/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Jeu 29/01", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Mar 03/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Mar 17/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Mer 14/01", time: "14h00-18h00", room: "salle2", session: 2 },
+      { date: "Ven 16/01", time: "15h00-19h00", room: "salle2", session: 3 },
+      { date: "Mar 20/01", time: "14h00-18h00", room: "salle2", session: 4 },
+      { date: "Jeu 22/01", time: "14h00-18h00", room: "salle2", session: 5 }
     ]},
     { number: 5, sessions: [
       { date: "Mar 13/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Ven 16/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Jeu 29/01", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Mer 04/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Mer 18/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Jeu 15/01", time: "8h30-12h30", room: "mbambey", session: 2 },
+      { date: "Lun 19/01", time: "8h30-12h30", room: "mbambey", session: 3 },
+      { date: "Mer 21/01", time: "8h30-12h30", room: "mbambey", session: 4 },
+      { date: "Ven 23/01", time: "8h30-12h30", room: "mbambey", session: 5 }
     ]},
     { number: 6, sessions: [
       { date: "Mar 13/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Ven 16/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Ven 30/01", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Mer 04/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Mer 18/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Jeu 15/01", time: "8h30-12h30", room: "salle2", session: 2 },
+      { date: "Lun 19/01", time: "8h30-12h30", room: "salle2", session: 3 },
+      { date: "Mer 21/01", time: "8h30-12h30", room: "salle2", session: 4 },
+      { date: "Ven 23/01", time: "8h30-12h30", room: "salle2", session: 5 }
     ]},
     { number: 7, sessions: [
       { date: "Mar 13/01", time: "14h00-18h00", room: "mbambey", session: 1 },
-      { date: "Lun 19/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Ven 30/01", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Jeu 05/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Jeu 19/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Jeu 15/01", time: "14h00-18h00", room: "mbambey", session: 2 },
+      { date: "Lun 19/01", time: "14h00-18h00", room: "mbambey", session: 3 },
+      { date: "Mer 21/01", time: "14h00-18h00", room: "mbambey", session: 4 },
+      { date: "Ven 23/01", time: "15h00-19h00", room: "mbambey", session: 5 }
     ]},
     { number: 8, sessions: [
       { date: "Mar 13/01", time: "14h00-18h00", room: "salle2", session: 1 },
-      { date: "Lun 19/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Lun 02/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Jeu 05/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Jeu 19/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Jeu 15/01", time: "14h00-18h00", room: "salle2", session: 2 },
+      { date: "Lun 19/01", time: "14h00-18h00", room: "salle2", session: 3 },
+      { date: "Mer 21/01", time: "14h00-18h00", room: "salle2", session: 4 },
+      { date: "Ven 23/01", time: "15h00-19h00", room: "salle2", session: 5 }
     ]},
+    // Semaine 3-4 : Groupes 9-16 (26 janvier - 6 février)
     { number: 9, sessions: [
-      { date: "Mer 14/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Mar 20/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Lun 02/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Ven 06/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Ven 20/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Lun 26/01", time: "8h30-12h30", room: "mbambey", session: 1 },
+      { date: "Mer 28/01", time: "8h30-12h30", room: "mbambey", session: 2 },
+      { date: "Ven 30/01", time: "8h30-12h30", room: "mbambey", session: 3 },
+      { date: "Mar 03/02", time: "8h30-12h30", room: "mbambey", session: 4 },
+      { date: "Jeu 05/02", time: "8h30-12h30", room: "mbambey", session: 5 }
     ]},
     { number: 10, sessions: [
-      { date: "Mer 14/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Mar 20/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Mar 03/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Ven 06/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Ven 20/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Lun 26/01", time: "8h30-12h30", room: "salle2", session: 1 },
+      { date: "Mer 28/01", time: "8h30-12h30", room: "salle2", session: 2 },
+      { date: "Ven 30/01", time: "8h30-12h30", room: "salle2", session: 3 },
+      { date: "Mar 03/02", time: "8h30-12h30", room: "salle2", session: 4 },
+      { date: "Jeu 05/02", time: "8h30-12h30", room: "salle2", session: 5 }
     ]},
     { number: 11, sessions: [
-      { date: "Jeu 15/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Mer 21/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Mar 03/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Lun 09/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Lun 23/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Lun 26/01", time: "14h00-18h00", room: "mbambey", session: 1 },
+      { date: "Mer 28/01", time: "14h00-18h00", room: "mbambey", session: 2 },
+      { date: "Ven 30/01", time: "15h00-19h00", room: "mbambey", session: 3 },
+      { date: "Mar 03/02", time: "14h00-18h00", room: "mbambey", session: 4 },
+      { date: "Jeu 05/02", time: "14h00-18h00", room: "mbambey", session: 5 }
     ]},
     { number: 12, sessions: [
-      { date: "Jeu 15/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Mer 21/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Mer 04/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Lun 09/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Lun 23/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Lun 26/01", time: "14h00-18h00", room: "salle2", session: 1 },
+      { date: "Mer 28/01", time: "14h00-18h00", room: "salle2", session: 2 },
+      { date: "Ven 30/01", time: "15h00-19h00", room: "salle2", session: 3 },
+      { date: "Mar 03/02", time: "14h00-18h00", room: "salle2", session: 4 },
+      { date: "Jeu 05/02", time: "14h00-18h00", room: "salle2", session: 5 }
     ]},
     { number: 13, sessions: [
-      { date: "Ven 16/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Jeu 22/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Mer 04/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Mar 10/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Mar 24/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Mar 27/01", time: "8h30-12h30", room: "mbambey", session: 1 },
+      { date: "Jeu 29/01", time: "8h30-12h30", room: "mbambey", session: 2 },
+      { date: "Lun 02/02", time: "8h30-12h30", room: "mbambey", session: 3 },
+      { date: "Mer 04/02", time: "8h30-12h30", room: "mbambey", session: 4 },
+      { date: "Ven 06/02", time: "8h30-12h30", room: "mbambey", session: 5 }
     ]},
     { number: 14, sessions: [
-      { date: "Ven 16/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Jeu 22/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Jeu 05/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Mar 10/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Mar 24/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Mar 27/01", time: "8h30-12h30", room: "salle2", session: 1 },
+      { date: "Jeu 29/01", time: "8h30-12h30", room: "salle2", session: 2 },
+      { date: "Lun 02/02", time: "8h30-12h30", room: "salle2", session: 3 },
+      { date: "Mer 04/02", time: "8h30-12h30", room: "salle2", session: 4 },
+      { date: "Ven 06/02", time: "8h30-12h30", room: "salle2", session: 5 }
     ]},
     { number: 15, sessions: [
-      { date: "Lun 19/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Ven 23/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Jeu 05/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Mer 11/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Mer 25/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Mar 27/01", time: "14h00-18h00", room: "mbambey", session: 1 },
+      { date: "Jeu 29/01", time: "14h00-18h00", room: "mbambey", session: 2 },
+      { date: "Lun 02/02", time: "14h00-18h00", room: "mbambey", session: 3 },
+      { date: "Mer 04/02", time: "14h00-18h00", room: "mbambey", session: 4 },
+      { date: "Ven 06/02", time: "15h00-19h00", room: "mbambey", session: 5 }
     ]},
     { number: 16, sessions: [
-      { date: "Lun 19/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Ven 23/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Ven 06/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Mer 11/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Mer 25/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Mar 27/01", time: "14h00-18h00", room: "salle2", session: 1 },
+      { date: "Jeu 29/01", time: "14h00-18h00", room: "salle2", session: 2 },
+      { date: "Lun 02/02", time: "14h00-18h00", room: "salle2", session: 3 },
+      { date: "Mer 04/02", time: "14h00-18h00", room: "salle2", session: 4 },
+      { date: "Ven 06/02", time: "15h00-19h00", room: "salle2", session: 5 }
     ]},
+    // Semaine 5-6 : Groupes 17-24 (9-20 février)
     { number: 17, sessions: [
-      { date: "Mar 20/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Lun 26/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Ven 06/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Jeu 12/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Jeu 26/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Lun 09/02", time: "8h30-12h30", room: "mbambey", session: 1 },
+      { date: "Mer 11/02", time: "8h30-12h30", room: "mbambey", session: 2 },
+      { date: "Ven 13/02", time: "8h30-12h30", room: "mbambey", session: 3 },
+      { date: "Mar 17/02", time: "8h30-12h30", room: "mbambey", session: 4 },
+      { date: "Jeu 19/02", time: "8h30-12h30", room: "mbambey", session: 5 }
     ]},
     { number: 18, sessions: [
-      { date: "Mar 20/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Lun 26/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Lun 09/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Jeu 12/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Jeu 26/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Lun 09/02", time: "8h30-12h30", room: "salle2", session: 1 },
+      { date: "Mer 11/02", time: "8h30-12h30", room: "salle2", session: 2 },
+      { date: "Ven 13/02", time: "8h30-12h30", room: "salle2", session: 3 },
+      { date: "Mar 17/02", time: "8h30-12h30", room: "salle2", session: 4 },
+      { date: "Jeu 19/02", time: "8h30-12h30", room: "salle2", session: 5 }
     ]},
     { number: 19, sessions: [
-      { date: "Mer 21/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Mar 27/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Lun 09/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Ven 13/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Ven 27/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Lun 09/02", time: "14h00-18h00", room: "mbambey", session: 1 },
+      { date: "Mer 11/02", time: "14h00-18h00", room: "mbambey", session: 2 },
+      { date: "Ven 13/02", time: "15h00-19h00", room: "mbambey", session: 3 },
+      { date: "Mar 17/02", time: "14h00-18h00", room: "mbambey", session: 4 },
+      { date: "Jeu 19/02", time: "14h00-18h00", room: "mbambey", session: 5 }
     ]},
     { number: 20, sessions: [
-      { date: "Mer 21/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Mar 27/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Mar 10/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Ven 13/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Ven 27/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Lun 09/02", time: "14h00-18h00", room: "salle2", session: 1 },
+      { date: "Mer 11/02", time: "14h00-18h00", room: "salle2", session: 2 },
+      { date: "Ven 13/02", time: "15h00-19h00", room: "salle2", session: 3 },
+      { date: "Mar 17/02", time: "14h00-18h00", room: "salle2", session: 4 },
+      { date: "Jeu 19/02", time: "14h00-18h00", room: "salle2", session: 5 }
     ]},
     { number: 21, sessions: [
-      { date: "Jeu 22/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Mer 28/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Mar 10/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Lun 16/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Lun 23/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Mar 10/02", time: "8h30-12h30", room: "mbambey", session: 1 },
+      { date: "Jeu 12/02", time: "8h30-12h30", room: "mbambey", session: 2 },
+      { date: "Lun 16/02", time: "8h30-12h30", room: "mbambey", session: 3 },
+      { date: "Mer 18/02", time: "8h30-12h30", room: "mbambey", session: 4 },
+      { date: "Ven 20/02", time: "8h30-12h30", room: "mbambey", session: 5 }
     ]},
     { number: 22, sessions: [
-      { date: "Jeu 22/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Mer 28/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Mer 11/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Lun 16/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Lun 23/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Mar 10/02", time: "8h30-12h30", room: "salle2", session: 1 },
+      { date: "Jeu 12/02", time: "8h30-12h30", room: "salle2", session: 2 },
+      { date: "Lun 16/02", time: "8h30-12h30", room: "salle2", session: 3 },
+      { date: "Mer 18/02", time: "8h30-12h30", room: "salle2", session: 4 },
+      { date: "Ven 20/02", time: "8h30-12h30", room: "salle2", session: 5 }
     ]},
     { number: 23, sessions: [
-      { date: "Ven 23/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Jeu 29/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Mer 11/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Mar 17/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Mar 24/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Mar 10/02", time: "14h00-18h00", room: "mbambey", session: 1 },
+      { date: "Jeu 12/02", time: "14h00-18h00", room: "mbambey", session: 2 },
+      { date: "Lun 16/02", time: "14h00-18h00", room: "mbambey", session: 3 },
+      { date: "Mer 18/02", time: "14h00-18h00", room: "mbambey", session: 4 },
+      { date: "Ven 20/02", time: "15h00-19h00", room: "mbambey", session: 5 }
     ]},
     { number: 24, sessions: [
-      { date: "Ven 23/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Jeu 29/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Jeu 12/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Mar 17/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Mar 24/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Mar 10/02", time: "14h00-18h00", room: "salle2", session: 1 },
+      { date: "Jeu 12/02", time: "14h00-18h00", room: "salle2", session: 2 },
+      { date: "Lun 16/02", time: "14h00-18h00", room: "salle2", session: 3 },
+      { date: "Mer 18/02", time: "14h00-18h00", room: "salle2", session: 4 },
+      { date: "Ven 20/02", time: "15h00-19h00", room: "salle2", session: 5 }
     ]},
+    // Semaine 7-8 : Groupes 25-27 (23 février - 4 mars) - CORRECTIF COMPLET
     { number: 25, sessions: [
-      { date: "Lun 26/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Ven 30/01", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Jeu 12/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Mer 18/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Mer 25/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Lun 23/02", time: "8h30-12h30", room: "mbambey", session: 1 },
+      { date: "Mer 25/02", time: "8h30-12h30", room: "mbambey", session: 2 },
+      { date: "Ven 27/02", time: "8h30-12h30", room: "mbambey", session: 3 },
+      { date: "Lun 02/03", time: "8h30-12h30", room: "mbambey", session: 4 },
+      { date: "Mer 04/03", time: "15h00-19h00", room: "mbambey", session: 5 }
     ]},
     { number: 26, sessions: [
-      { date: "Lun 26/01", time: "8h30-12h30", room: "salle2", session: 1 },
-      { date: "Ven 30/01", time: "14h00-18h00", room: "salle2", session: 2 },
-      { date: "Ven 13/02", time: "8h30-12h30", room: "mbambey", session: 3 },
-      { date: "Mer 18/02", time: "14h00-18h00", room: "salle2", session: 4 },
-      { date: "Mer 25/02", time: "8h30-12h30", room: "salle2", session: 5 }
+      { date: "Lun 23/02", time: "8h30-12h30", room: "salle2", session: 1 },
+      { date: "Mer 25/02", time: "8h30-12h30", room: "salle2", session: 2 },
+      { date: "Ven 27/02", time: "8h30-12h30", room: "salle2", session: 3 },
+      { date: "Lun 02/03", time: "8h30-12h30", room: "salle2", session: 4 },
+      { date: "Mer 04/03", time: "15h00-19h00", room: "salle2", session: 5 }
     ]},
     { number: 27, sessions: [
-      { date: "Mar 27/01", time: "8h30-12h30", room: "mbambey", session: 1 },
-      { date: "Lun 02/02", time: "14h00-18h00", room: "mbambey", session: 2 },
-      { date: "Ven 13/02", time: "8h30-12h30", room: "salle2", session: 3 },
-      { date: "Jeu 19/02", time: "14h00-18h00", room: "mbambey", session: 4 },
-      { date: "Ven 27/02", time: "8h30-12h30", room: "mbambey", session: 5 }
+      { date: "Lun 23/02", time: "14h00-18h00", room: "mbambey", session: 1 },
+      { date: "Mer 25/02", time: "14h00-18h00", room: "salle2", session: 2 },
+      { date: "Ven 27/02", time: "15h00-19h00", room: "mbambey", session: 3 },
+      { date: "Lun 02/03", time: "14h00-18h00", room: "salle2", session: 4 },
+      { date: "Mer 04/03", time: "15h00-19h00", room: "mbambey", session: 5 }
     ]}
   ];
 
-  // Générer les cartes de groupe
-  const groupPlanning = document.getElementById('groupPlanning');
-  
-  groupsData.forEach(group => {
-    const card = document.createElement('div');
-    card.className = 'group-card';
+  // Fonctions utilitaires
+  function parseDate(dateStr) {
+    const parts = dateStr.split(' ');
+    const dayMonth = parts[1].split('/');
+    const day = parseInt(dayMonth[0]);
+    const month = parseInt(dayMonth[1]) - 1;
+    return new Date(2026, month, day);
+  }
+
+  function formatDate(date) {
+    const days = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
+    const dayName = days[date.getDay()];
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    return `${dayName} ${day}/${month}`;
+  }
+
+  // Fonction pour vérifier 5 séances en max 10 jours
+  function checkDuration(groupSessions) {
+    const dates = groupSessions.map(s => parseDate(s.date));
+    const firstDate = new Date(Math.min(...dates));
+    const lastDate = new Date(Math.max(...dates));
     
-    let sessionsHTML = '';
-    group.sessions.forEach((session) => {
-      const roomClass = session.room === 'mbambey' ? 'room-mbambey' : 'room-salle2';
-      const roomName = session.room === 'mbambey' ? 'Salle Mbambey' : 'Salle Info 2';
-      const theme = sessionThemes[session.session - 1];
+    // Calculer la durée totale en jours
+    const totalDays = (lastDate - firstDate) / (1000 * 60 * 60 * 24) + 1;
+    
+    return Math.round(totalDays);
+  }
+
+  // Fonction pour vérifier le repos de 24h
+  function check24hRest(groupSessions) {
+    for (let i = 1; i < groupSessions.length; i++) {
+      const prevDate = parseDate(groupSessions[i-1].date);
+      const currentDate = parseDate(groupSessions[i].date);
       
-      sessionsHTML += `
-        <div class="session-item">
-          <div class="session-icon s${session.session}" title="${theme}">${sessionIcons[session.session - 1]}</div>
-          <div class="session-details">
-            <span class="session-date">S${session.session} • ${session.date}</span>
-            <span class="session-time">${session.time}</span>
-            <span class="session-theme">${theme}</span>
+      // Calcul de la différence en heures
+      const diffHours = (currentDate - prevDate) / (1000 * 60 * 60);
+      if (diffHours < 24) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  // Fonction pour vérifier les horaires du vendredi soir
+  function checkFridayTimes(groupSessions) {
+    for (let session of groupSessions) {
+      const day = session.date.split(' ')[0];
+      if (day === "Ven") {
+        // Vérifier si c'est une session du matin ou de l'après-midi
+        const isMorning = session.time === "8h30-12h30";
+        const isFridayAfternoon = session.time === "15h00-19h00";
+        
+        // Les sessions du vendredi après-midi doivent être à 15h-19h
+        if (!isMorning && !isFridayAfternoon) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  // Générer les cartes de groupe
+  function generateGroupCards() {
+    const groupPlanning = document.getElementById('groupPlanning');
+    
+    groupPlanning.innerHTML = '';
+    
+    groupsData.forEach((group) => {
+      const card = document.createElement('div');
+      card.className = 'group-card';
+      
+      const totalDays = checkDuration(group.sessions);
+      const has24hRest = check24hRest(group.sessions);
+      const hasFridayTimes = checkFridayTimes(group.sessions);
+      
+      const isValid = totalDays <= 14 && has24hRest && hasFridayTimes;
+      
+      let sessionsHTML = '';
+      group.sessions.forEach((session) => {
+        const roomClass = session.room === 'mbambey' ? 'room-mbambey' : 'room-salle2';
+        const roomName = session.room === 'mbambey' ? 'Salle Mbambey' : 'Salle Info 2';
+        const theme = sessionThemes[session.session - 1];
+        
+        sessionsHTML += `
+          <div class="session-item">
+            <div class="session-icon s${session.session}" title="${theme}">${sessionIcons[session.session - 1]}</div>
+            <div class="session-details">
+              <span class="session-date">S${session.session} • ${session.date}</span>
+              <span class="session-time">${session.time}</span>
+              <span class="session-theme">${theme}</span>
+            </div>
+            <span class="session-room ${roomClass}">${roomName}</span>
           </div>
-          <span class="session-room ${roomClass}">${roomName}</span>
+        `;
+      });
+      
+      // Déterminer la semaine
+      let semaine = "";
+      if (group.number <= 8) semaine = "Semaine 1-2 (12-23/01)";
+      else if (group.number <= 16) semaine = "Semaine 3-4 (26/01-06/02)";
+      else if (group.number <= 24) semaine = "Semaine 5-6 (09-20/02)";
+      else semaine = "Semaine 7-8 (23/02-04/03)";
+      
+      card.innerHTML = `
+        <div class="group-header">
+          <div class="group-number">Groupe ${group.number}</div>
+          <div class="student-count">
+            <i class="fas fa-calendar-alt"></i> ${totalDays} jours
+            ${isValid ? '<span style="color: #065f46; background: #d1fae5; padding: 3px 8px; border-radius: 10px; font-size: 10px;"><i class="fas fa-check"></i> OK</span>' : 
+                       '<span style="color: #991b1b; background: #fee2e2; padding: 3px 8px; border-radius: 10px; font-size: 10px;"><i class="fas fa-exclamation"></i> Vérif</span>'}
+          </div>
         </div>
+        <div style="font-size: 10px; color: #666; margin-bottom: 10px;">
+          <i class="fas fa-calendar-week"></i> ${semaine}
+        </div>
+        <div style="font-size: 10px; color: #666; margin-bottom: 10px;">
+          <i class="fas fa-info-circle"></i> 5 séances en ${totalDays} jours
+          ${!has24hRest ? '<div style="color: #991b1b; margin-top: 3px;"><i class="fas fa-exclamation-triangle"></i> Vérifier repos 24h</div>' : ''}
+          ${!hasFridayTimes ? '<div style="color: #991b1b; margin-top: 3px;"><i class="fas fa-exclamation-triangle"></i> Vérifier horaires vendredi</div>' : ''}
+        </div>
+        ${sessionsHTML}
       `;
+      
+      groupPlanning.appendChild(card);
     });
     
-    card.innerHTML = `
-      <div class="group-header">
-        <div class="group-number">Groupe ${group.number}</div>
-        <div class="student-count"><i class="fas fa-user-graduate"></i> 50 étudiants</div>
-      </div>
-      ${sessionsHTML}
-    `;
+    // Vérification globale
+    console.log("=== VÉRIFICATION DU PLANNING ===");
+    let validGroups = 0;
+    groupsData.forEach((group, index) => {
+      const totalDays = checkDuration(group.sessions);
+      const has24hRest = check24hRest(group.sessions);
+      const hasFridayTimes = checkFridayTimes(group.sessions);
+      
+      if (totalDays <= 14 && has24hRest && hasFridayTimes) {
+        validGroups++;
+        console.log(`✓ Groupe ${group.number}: ${totalDays} jours, repos OK, horaires OK`);
+      } else {
+        console.log(`✗ Groupe ${group.number}: ${totalDays} jours, repos: ${has24hRest}, vendredi: ${hasFridayTimes}`);
+      }
+    });
     
-    groupPlanning.appendChild(card);
-  });
+    console.log(`\nRÉSUMÉ: ${validGroups}/${groupsData.length} groupes respectent toutes les contraintes`);
+  }
 
-  // Fonction pour ajouter des effets d'impression
+  // Initialisation au chargement de la page
   document.addEventListener('DOMContentLoaded', function() {
     console.log('Emploi du temps ENO Sébikotane chargé avec succès!');
-    console.log('Toutes les dates S5 ont été vérifiées et corrigées.');
+    console.log('Planning optimisé: 5 séances en 10-14 jours maximum par groupe');
     
-    // La partie qui ajoutait la date automatiquement a été supprimée ici
+    generateGroupCards();
   });
 </script>
 
